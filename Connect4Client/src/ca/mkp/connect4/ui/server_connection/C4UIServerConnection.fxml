@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mkp.connect4.ui.server_connection.ServerConnectionController">
+   <children>
+      <Label layoutX="69.0" layoutY="35.0" prefHeight="17.0" prefWidth="65.0" text="Server IP:" />
+      <Button fx:id="buttonServerConnect" layoutX="157.0" layoutY="66.0" mnemonicParsing="false" onAction="#onServerConnectButtonClick" text="Connect" />
+      <TextField fx:id="serverIPTextField" layoutX="157.0" layoutY="31.0" promptText="Server IP" />
+   </children>
+</Pane>

@@ -1,0 +1,27 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.column:hover 
+{
+    -fx-background-color: red;
+    -fx-opacity: 30%;
+}
+
+.black
+{
+	-fx-text-fill: black;
+}
+
+.emptyCell
+{
+	-fx-text-fill: white;
+	-fx-effect: innershadow(gaussian,black,7,0,0,0);
+}
+
+.red 
+{
+    -fx-text-fill: red;
+}
+.gridBackground 
+{
+    -fx-background-color: #D6D1B1;
+}

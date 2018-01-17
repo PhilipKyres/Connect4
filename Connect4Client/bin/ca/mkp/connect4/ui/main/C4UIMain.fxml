@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mkp.connect4.ui.main.C4UIMainController">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="40.0" />
+   </columnConstraints>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+         <children>
+            <Label fx:id="labelScorePlayer" alignment="CENTER" contentDisplay="TOP" prefHeight="120.0" prefWidth="124.0" styleClass="red" stylesheets="@application.css" text="0">
+               <font>
+                  <Font name="Arial Black" size="57.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="85.0" prefWidth="100.0" GridPane.columnIndex="10" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+         <children>
+            <Label fx:id="labelScoreServer" alignment="CENTER" contentDisplay="CENTER" prefHeight="165.0" prefWidth="221.0" stylesheets="@application.css" text="0">
+               <font>
+                  <Font name="Arial Black" size="57.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+         <children>
+            <Label fx:id="labelPlayerChips" alignment="CENTER" prefHeight="190.0" prefWidth="660.0" styleClass="red" stylesheets="@application.css" text="21">
+               <font>
+                  <Font size="57.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="16" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+         <children>
+            <Label fx:id="labelServerChips" alignment="CENTER" prefHeight="220.0" prefWidth="211.0" styleClass="blue" stylesheets="@application.css" text="21" textFill="#0a0a0a">
+               <font>
+                  <Font size="57.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="6" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="307.0" text="Your Remaining Tokens" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="14" GridPane.columnSpan="6" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="394.0" text="Computer's Remaining Tokens" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.columnSpan="6" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="301.0" text="Score" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="18">
+         <children>
+            <Label alignment="CENTER" prefHeight="162.0" prefWidth="1251.0" text="Made by Michael McMahon, Phillip Kyres and Mark Parenteau" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="402.0" prefWidth="433.0" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="3" GridPane.columnSpan="14" GridPane.rowIndex="5" GridPane.rowSpan="12">
+         <children>
+            <GridPane fx:id="boardGridPane" prefHeight="497.0" prefWidth="821.0" styleClass="gridBackground" stylesheets="@application.css" HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="00" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="00" textAlignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="01" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="01" textAlignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+				  <Label id="02" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="02" textAlignment="CENTER" GridPane.rowIndex="2">
+				   	<font>
+		          		<Font size="36.0" />
+					</font>
+				  </Label>
+				  <Label id="03" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="03" textAlignment="CENTER" GridPane.rowIndex="3">
+				    <font>
+			 			<Font size="36.0" />
+					</font>
+				  </Label>
+				  <Label id="04" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="04" textAlignment="CENTER" GridPane.rowIndex="4">
+					<font>
+						<Font size="36.0" />
+					</font>
+				  </Label>
+				  <Label id="05" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="05" textAlignment="CENTER" GridPane.rowIndex="5">
+					<font>
+						<Font size="36.0" />
+					</font>
+				  </Label>
+                  <Label id="10" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="10" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+					<font>
+						<Font size="36.0" />
+					</font>
+				  </Label>
+                  <Label id="11" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="11" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="12" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="12" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="13" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="13" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="14" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="14" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="15" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="15" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="20" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="20" textAlignment="CENTER" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="21" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="21" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="22" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="22" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="23" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="23" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="24" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="24" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="25" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="25" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="30" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="30" textAlignment="CENTER" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="31" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="31" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="32" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="32" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="33" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="33" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="34" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="34" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="35" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="35" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="40" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="40" textAlignment="CENTER" GridPane.columnIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="41" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="41" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="42" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="42" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="43" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="43" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="44" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="44" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="45" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="45" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="50" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="50" textAlignment="CENTER" GridPane.columnIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="51" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="51" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="52" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="52" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="53" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="53" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="54" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="54" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="55" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="55" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="60" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="60" textAlignment="CENTER" GridPane.columnIndex="6">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="61" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="61" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="62" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="62" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="63" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="63" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="64" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="64" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label id="65" alignment="CENTER" prefHeight="168.0" prefWidth="270.0" styleClass="emptyCell" stylesheets="@application.css" text="65" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <VBox id="C0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.rowSpan="6" />
+                  <VBox id="C1" layoutX="10.0" layoutY="10.0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowSpan="6" />
+                  <VBox id="C2" layoutX="108.0" layoutY="10.0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.columnIndex="2" GridPane.rowSpan="6" />
+                  <VBox id="C3" layoutX="206.0" layoutY="10.0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowSpan="6" />
+                  <VBox id="C4" layoutX="304.0" layoutY="10.0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.columnIndex="4" GridPane.rowSpan="6" />
+                  <VBox id="C5" layoutX="403.0" layoutY="10.0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.columnIndex="5" GridPane.rowSpan="6" />
+                  <VBox id="C6" layoutX="502.0" layoutY="10.0" onMouseClicked="#onColumnClick" prefHeight="200.0" prefWidth="100.0" styleClass="column" stylesheets="@application.css" GridPane.columnIndex="6" GridPane.rowSpan="6" />
+               </children>
+            </GridPane>
+         </children></HBox>
+      <MenuBar prefHeight="23.0" prefWidth="990.0" GridPane.columnSpan="20" GridPane.valignment="TOP">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#onMenuItemExitClick" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</GridPane>
